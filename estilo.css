@@ -11,7 +11,7 @@ body{
 .center{
 	margin: 0 auto; /*centralizando o conteúdo no navegador*/
 	max-width: 1200px;
-	width: 100%; /*largura do layout*/		
+	width: 95%; /*largura do layout*/		
 }
 /*.clearfix usado para adicionar um espaço vazio antes e depois dos elementos
   evitando que os floats se aglomerem.
@@ -61,7 +61,7 @@ a:hover{
 header{
 	border-bottom: 1px solid #E0E0E0; /*borda na base da seção*/
 	height:150px;
-	width:100%; /*1200px largura do topo*/
+	width:95%; /*1200px largura do topo*/
 }
 /*
 =========================
@@ -96,16 +96,16 @@ nav ul{
 		display: inline; /*deixa o menu na horizontal*/
 	}
 		nav ul li a{
-			margin-right: 30px; /*espaço à direita de cada link do menu*/
+			margin-right: 0.0833333333%; /*espaço à direita de cada link do menu*/
 		}
 		nav ul li:nth-child(5) a{
 			margin-right:0px; /*indica que o 5º elemento da lista (contato) terá a margem direita zerada*/
 		}
 nav a:link, nav a:visited{
 	color:#999;
-	font-size: 22px;
+	font-size: 1.2222222222em;
 	font-weight: 300;
-	letter-spacing: -2px; /*espaçamento entre as letras*/
+	letter-spacing: 0.01em; /*espaçamento entre as letras*/
 	line-height: 26px;
 	display:inline-block;
 }
@@ -125,7 +125,7 @@ Seção .CHAMADA ========================================
 	h2 span{
 		font-size: 1em; /*60px;*/
 		font-weight: 300;
-		letter-spacing: -2px;
+		letter-spacing: -0.0333333333em;
 		line-height: 1em;/*60px;*/
 	}
 	.chamada h3 {
@@ -139,18 +139,18 @@ Seção .CONTAINER - Conteúdo com 3 colunas =============
 .container{
 	background-color:#FE9481;
 	height: 417px;
-	padding:30px;
+	padding: 2.5%;
 	max-width:1200px;
-	width: 100%;
+	width: 95%;
 }
 .desktop, .tablet, .mobile{
 	float:left;
 	position:relative;
 	text-align:center;
-	width:30%;
+	width:31.578947%;
 }
 .desktop, .tablet{
-	margin-right: 30px;
+	margin-right: 1.6666666667em;
 }
 .mobile{
 	background-color:#9C8CB9;
@@ -166,7 +166,7 @@ Seção .CONTAINER - Conteúdo com 3 colunas =============
 /*imagens*/
 .container .desktop figure, .container .tablet figure, .container .mobile figure {
 	margin: 15px auto 0px auto; 
-	width: 20.8333333333%;
+	width: 69.4444444444%;
 }
 
 /*
@@ -176,9 +176,9 @@ formatação do texto
 */
 .container h3{
 	color:#fff;
-	font-size: 32px;
+	font-size: 1.7777777778em;
 	font-weight: 300;
-	letter-spacing: -2px;
+	letter-spacing: -0.1111111111em;
 	margin-bottom: 30px;
 	text-shadow:none;
 }
@@ -186,9 +186,10 @@ formatação do texto
 	background-color:#fff;
 	float:left;
 	height:160px;
-	padding:7px;
+	padding: 0.04375%;
 	position:absolute;
-	width-max:360px;
+	max-width:360px;
+	width: 31.578947%
 	text-align:justify;
 	top:225px;
 }
@@ -199,20 +200,21 @@ formatação do botão
 =========================
 */
 span.btn{
-	font-size: 20px;
+	font-size: 1.1111111111em;
 	font-weight: 400;
-	letter-spacing: -2px;
+	letter-spacing: -0.1111111111em;
 	height:27px;
 	margin-top: 30px;
 	position:absolute;
 	right: 1px;
 	text-align:center;
 	text-shadow:none;
-	width:120px;
+	max-width: 120px;
+	width:100%;
 }
 span.btn a{
 	color:#fff;
-	padding: 2px 4px;
+	padding: 0.0166666667% 0.0333333334%;
 }
 .desktop span.btn a{
 	background-color:#FE9481;
@@ -230,12 +232,13 @@ Seção FOOTER - Rodape com 2 colunas &lt;&lt;&lt;&lt;&lt;===================
 footer{
 	clear:both;
 	height: 50px;
-	padding: 10px 0px;
-	width:1200px;
+	padding: 0.008333333% 0%;
+	max-width:1200px;
+	width: 100%
 }
 .copyright{
 	float:left;
-	margin-left:30px;
+	margin-left:0.025%;
 }
 .desenvolvedor{
 	float:right;
@@ -245,7 +248,288 @@ footer{
 /*----------------------------------------------------------
 Media Queries <<<<<=========================================
 ----------------------------------------------------------*/
+@media screen and (max-width: 1200px){
+	.chamada h3 {
+		font-size: 1.66666666667em; /* 30px ÷ 18px */
+	}
+	.container h3{
+		font-size: 1.55555555556em; /*  28px ÷ 18px */
+	}
+	.container p{
+		height: 170px;
+		top:217px;
+	}
+}
 
+@media screen and (max-width:960px){
+	header h1 a{
+		width:37.5%; /* 360px ÷ 960px */
+	}
+	nav{
+		width:62.5%; /* 600px ÷ 960px */
+	}
+	h2{
+		font-size:2.6666666667em; /*48px ÷ 18px*/
+	}
+/*.chamada*/
+	.chamada {
+		height: 250px;
+	}
+		.chamada h3{
+			font-size:1.5em; /*27px ÷ 18px*/
+			width:88.54166666666667%; /*850px ÷ 960px*/
+		}
+/*.container*/
+	.container{
+		height: 425px;
+		padding:3.125%; /* 30px ÷ 960px */
+		width:93.75%; 
+	}
+		.desktop, .tablet, .mobile{
+			width:31.45833333333333%; /* 302px ÷ 960px */
+		}
+		.container .desktop figure, .container .tablet figure, .container .mobile figure {
+			width:66.22516556291391%; /* 200px ÷ 302px %*/
+		}
+			.container img{
+					height:100px;
+				}
+		.container h3{
+			font-size: 1.6666666667em; /*30px ÷ 18px*/
+		}
+		.container p{
+			font-size: 0.8333333333em; /*15px ÷ 18px*/
+			top: 230px;
+		}
+}
+
+@media screen and (max-width:768px){
+	h2, a, a:link, a:visited{
+	color:#FBCA61; 
+}
+	a:hover{
+		color:#F9AD0F;
+}
+	
+	header {
+		height:195px;
+		text-align:center;
+	}
+		header h1 a{
+			background-position: 57% 0;
+			height: 126px;
+			margin-bottom: 15px;
+			width: 100%;
+		}
+		nav{
+			float:none;
+			text-align:center;
+			width: 100%;
+		}
+			nav a.ativo:link, nav a:hover{
+				color:#FBCA61; 
+			}
+	.chamada{
+		height:200px;
+	}
+		h2 {
+			font-size: 2.2222222222em; /*40px ÷ 18px*/
+		}
+		.chamada h3{
+			font-size:1.1111111111em; /*20px ÷ 18px*/
+		}
+	.container{
+		background-color:#FCDA92;
+		height: 380px;
+		padding:3.90625%; /* 30px ÷ 768px = 0.025 x 100 = 2.5%*/
+		width:92.1875%; 
+	}
+		.desktop, .tablet, .mobile{
+			width:31.25%; /* 240px ÷ 768px */
+		}
+		.container .desktop figure, .container .tablet figure, .container .mobile figure {
+			width:62.25%; /* 150px ÷ 240px %*/
+		}
+			.container img{
+					height:80px;
+				}
+		.container h3{
+			font-size: 1.6666666667em; /*30px ÷ 18px*/
+		}
+		.container p{
+			font-size: 0.7777777778em; /*14px ÷ 18px*/
+			height:140px;
+			line-height: 1.1428571428em; /*16px ÷ 14px*/
+			padding: 2.9166666667%; /* 7px ÷ 240px */
+			top: 215px;
+		}
+			span.btn{
+				font-size: 1.1111111111em; 
+				letter-spacing: -0.1em; /* -2px ÷ 20px = -0.1em */
+				height:22px;
+				margin-top: 20px;
+				position:absolute;
+				width:50%;
+			}
+			span.btn a{
+				padding: 2px 3.333333333333333%; /* 4px ÷ 120px */
+			}
+}
+
+@media screen and (max-width:480px){
+*{
+	margin:0;
+	padding:0;
+}
+.center{
+	width:100%;
+}
+h2, a, a:link, a:visited{
+	color:#9C8CB9; 
+}
+a:hover{
+		color:#745F9A;
+}
+header {
+	border-bottom: none;
+	height:auto;
+	text-align:center;
+}
+	header h1 a{
+		background-position: 50% 0;
+		display:inherit;
+		height: 126px;
+		width: 100%;
+	}
+nav{
+	clear:both;
+}
+	nav li {
+		background-color: #9C8CB9;
+		display:block;
+	}
+		nav ul li a{
+			height: 40px;
+			margin: 0 auto;
+			padding-top:3px;
+			text-align:center;
+			text-shadow:none;
+			width: 100%;
+		}
+		nav li a:link{
+			color:#fff;
+			font-size:1.3888888889em; /*25px ÷ 18px*/
+		}
+		nav li a.ativo:link, nav li a:hover, nav li a:visited {
+			background-color:#745F9A; 
+			color:#fff;
+			text-decoration:none;
+		}
+		nav li a.ativo:hover, nav li a.ativo:visited{
+			 background-color: #9C8CB9;
+		}
+.chamada{
+	height:130px;
+	margin-top:25px;
+}
+	h2 {
+		font-size: 1.4444444444em; /*26px ÷ 18px*/
+		letter-spacing:-0.0769230769230769em; /*2px ÷ 26px*/
+		margin-bottom: 15px;
+	}
+	.chamada h3{
+		font-size:0.7777777778em; /*14px ÷ 18px*/
+	}
+.container{	
+	background-color:#9C8CB9;
+	margin:0;
+	padding:0;
+	width:100%;
+}
+	.container .desktop, .container .tablet, .container .mobile{
+		float:none;
+		height:160px;
+		width:100%;
+	}
+	.container .desktop figure, .container .tablet figure, .container .mobile figure{
+		float:left;
+		height:160px;
+		margin:0;
+		padding:0;
+		width: 53.125%; /*255px ÷ 480px*/
+	}
+	.container h3{
+		float:left;
+		margin-top: 40px;
+		width: 46.875%; /*225px ÷ 480px*/
+	}	
+		.container .desktop figure img, .container .tablet figure img, .container .mobile figure img{
+			height:125px;
+			margin-top:15px;
+			width:86.2745098040%; 
+		}
+	.container p{
+		display:none; /*ocultar as linhas*/
+	}
+/*footer*/
+	.copyright, .desenvolvedor{
+		float:none;
+		margin: 0;
+		padding: 0;
+		text-align:center;
+	}
+	.desenvolvedor figure{
+		width:inherit;
+	}
+}
+
+@media screen and (max-width:320px){
+h2, a, a:link, a:visited{
+	color:#79E1D5; 
+}
+a:hover{
+		color:#2FD0BC;
+}
+	nav li {
+		background-color: #79E1D5;
+	}
+		nav li a:link{
+		color:#555;
+		}
+		nav li a.ativo:link, nav li a:hover, nav li a:visited {
+			background-color:#2FD0BC; 
+			color:#fff;
+		}
+		nav li a.ativo:hover, nav li a.ativo:visited{
+			 background-color: #2FD0BC;
+		}
+.chamada{
+	height:130px;
+	margin-top:20px;
+}
+	h2 {
+		font-size: 1.1111111111em; /*20px ÷ 18px*/
+		margin-bottom: 15px;
+	}
+	.chamada h3{
+		font-size:0.7777777778em; /*14px ÷ 18px*/
+	}
+	.container .desktop, .container .tablet, .container .mobile{
+		float:none;
+		height:160px;
+		width:100%;
+	}
+	.container .desktop figure, .container .tablet figure, .container .mobile figure{
+		float:left;
+		width: 100%;
+	}
+	.container h3{
+		display:none;
+	}	
+	.container p{
+		display:none;
+	}
+}
 
 
 
@@ -590,7 +874,7 @@ button:-moz-focusring,
 
 fieldset {
   border: 1px solid #c0c0c0;
-  margin: 0 2px;
+  margin: 0 0.35em;
   padding: 0.35em 0.625em 0.75em;
 }
 
